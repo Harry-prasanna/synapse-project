@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "159823692298",
+    "project_id": "studyonline-1cd77",
+    "storage_bucket": "studyonline-1cd77.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:159823692298:android:031dc0ce0433d62de415f3",
+        "android_client_info": {
+          "package_name": "com.example.studyonline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6pjNJHPsS6TLR6FDQz6Px-onLxQMainA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
