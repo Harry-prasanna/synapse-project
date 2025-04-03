@@ -101,7 +101,7 @@ class OnboardingActivity : AppCompatActivity() {
         editor.putBoolean("FirstTimeLaunch", false)
         editor.apply()
 
-        // ✅ Redirect to SignInActivity instead of MainActivity
+        
         startActivity(Intent(this, SignInActivity::class.java))
         finish() // Close OnboardingActivity
     }
