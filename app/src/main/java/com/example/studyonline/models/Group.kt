@@ -7,5 +7,7 @@ data class Group(
     val category: String = "",
     val type: String = "",
     val createdBy: String = "",
-    val timestamp: Long = 0L
+    val timestamp: Long = 0L,
+    val members: List<String> = emptyList()
 )
+

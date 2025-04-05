@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="30dp"
-    android:background="@android:color/white"
-    tools:context=".CreateGroupActivity">
+    android:padding="24dp"
+    android:background="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,69 +12,89 @@
         android:orientation="vertical"
         android:gravity="center_horizontal">
 
+        <!-- Title -->
         <TextView
             android:id="@+id/tvCreateGroupTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hi! Create a New Group"
-            android:textSize="22sp"
+            android:textSize="28sp"
             android:textStyle="bold"
-            android:textColor="@color/grey"
-            android:layout_marginBottom="24dp"
-            android:layout_marginTop="8dp"
-            />
-
+            android:fontFamily="sans-serif"
+            android:textColor="@color/purple_200"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="32dp" />
 
         <!-- Group Name -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/LoginTextInputOuterFieldStyle"
-            android:layout_marginBottom="16dp">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Group Name"
+            app:boxStrokeColor="@color/light_green"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etGroupName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Group Name" />
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Description -->
+        <!-- Group Description -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/LoginTextInputOuterFieldStyle"
-            android:layout_marginBottom="16dp">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Group Description"
+            app:boxStrokeColor="@color/light_green"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etGroupDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Group Description"
                 android:minLines="3"
                 android:gravity="top"
-                android:inputType="textMultiLine" />
+                android:inputType="textMultiLine"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <!-- Category -->
         <com.google.android.material.textfield.TextInputLayout
-            style="@style/LoginTextInputOuterFieldStyle"
-            android:layout_marginBottom="16dp">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Category (e.g., Math, Science)"
+            app:boxStrokeColor="@color/light_green"
+            app:boxStrokeWidthFocused="2dp"
+            android:layout_marginBottom="20dp">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etGroupCategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Category (e.g., Math, Science)" />
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <!-- Group Type -->
+        <!-- Group Type Label -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Group Type"
             android:textStyle="bold"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="4dp"
             android:textSize="14sp"
-            android:textColor="@android:color/black" />
+            android:fontFamily="sans-serif"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="4dp" />
 
+        <!-- Group Type Selection -->
         <RadioGroup
             android:id="@+id/rgGroupType"
             android:layout_width="match_parent"
@@ -91,6 +107,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Public"
+                android:fontFamily="sans-serif"
                 android:checked="true" />
 
             <RadioButton
@@ -98,7 +115,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Private"
-                android:layout_marginStart="32dp" />
+                android:layout_marginStart="32dp"
+                android:fontFamily="sans-serif" />
         </RadioGroup>
 
         <!-- Create Group Button -->
@@ -111,6 +129,7 @@
             android:textStyle="bold"
             android:textColor="@android:color/white"
             android:backgroundTint="@color/purple_200"
-            app:cornerRadius="50dp" />
+            app:cornerRadius="50dp"
+            android:layout_marginBottom="40dp" />
     </LinearLayout>
 </ScrollView>

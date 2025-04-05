@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
 
 
     <application
@@ -33,7 +35,10 @@
         <activity android:name=".MainActivity" />
         <activity android:name=".CreateGroupActivity" />
         <activity android:name=".JoinGroupActivity" />
+        <activity android:name=".YourGroupsActivity" />
+        <activity android:name=".GroupDetailActivity" />
         <activity android:name=".UpcomingSessionsActivity" />
+
 
     </application>
 

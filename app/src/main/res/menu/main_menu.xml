@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:title="Home"
+            android:icon="@drawable/navhomeicon"/>
+        <item
+            android:id="@+id/nav_search"
+            android:title="Search"
+            android:icon="@drawable/navsearchicon"/>
+        <item
+            android:id="@+id/nav_all_categories"
+            android:title="All Categories"
+            android:icon="@drawable/navcatageroyicon"/>
+
+    </group>
+
+    <item android:title="Profile">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_login"
+                    android:title="Login"
+                    android:icon="@drawable/navloginicon"/>
+                <item
+                    android:id="@+id/nav_profile"
+                    android:title="Profile"
+                    android:icon="@drawable/navprofileicon"/>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/navlogouticon"/>
+            </group>
+
+        </menu>
+    </item>
+
+    <item android:title="Categories">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_restaurants"
+                    android:title="Books"
+                    android:icon="@drawable/navbookicon"/>
+                <item
+                    android:id="@+id/nav_bank"
+                    android:title="Archived classes"
+                    android:icon="@drawable/navarchivedicon"/>
+                <item
+                    android:id="@+id/nav_education"
+                    android:title="Classroom folder"
+                    android:icon="@drawable/navclassroomicon"/>
+                <item
+                    android:id="@+id/nav_shop"
+                    android:title="Settings"
+                    android:icon="@drawable/navsettingicon"/>
+
+                <item
+                    android:id="@+id/nav_help"
+                    android:title="Help"
+                    android:icon="@drawable/navhelpicon"/>
+            </group>
+
+        </menu>
+    </item>
+
+
+
+</menu>

@@ -1,11 +1,11 @@
 package com.example.studyonline.adapters
 
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.example.studyonline.R
 import com.example.studyonline.models.OnboardingItem
@@ -30,10 +30,14 @@ class OnboardingAdapter(private val onboardingItems: List<OnboardingItem>) :
         holder.imageView.setImageResource(item.imageResId)
         holder.titleText.text = item.title
         holder.descriptionText.text = item.description
+        
+        holder.titleText.setTextColor(
+            ContextCompat.getColor(holder.itemView.context, R.color.purple_200)
+        )
+        holder.descriptionText.setTextColor(
+            ContextCompat.getColor(holder.itemView.context, R.color.black)
+        )
     }
 
-    override fun getItemCount(): Int {
-        return onboardingItems.size
-    }
+    override fun getItemCount(): Int = onboardingItems.size
 }
-

@@ -1,53 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="12dp"
-    android:layout_marginTop="8dp"
-    android:layout_marginHorizontal="6dp"
-    android:elevation="4dp"
-    android:padding="12dp">
+    android:layout_marginVertical="8dp"
+    android:layout_marginHorizontal="12dp"
+    android:elevation="6dp"
+    app:cardCornerRadius="16dp"
+    android:backgroundTint="@android:color/white">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:background="@color/purple_200">
 
-        <TextView
-            android:id="@+id/tvGroupName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Group Name"
-            android:textStyle="bold"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"/>
+        <!-- Group Icon (with circular background) -->
+        <FrameLayout
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/circle_background">
 
-        <TextView
-            android:id="@+id/tvGroupCategory"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Category"
-            android:textColor="@android:color/darker_gray"
-            android:textSize="14sp"/>
+            <ImageView
+                android:id="@+id/imgGroupIcon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/navprofileicon"
+                android:scaleType="centerInside"
+                android:contentDescription="Group Icon"
+                android:padding="8dp" />
+        </FrameLayout>
 
-        <TextView
-            android:id="@+id/tvGroupDescription"
-            android:layout_width="match_parent"
+        <!-- Group Info -->
+        <LinearLayout
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Group Description"
-            android:maxLines="2"
-            android:ellipsize="end"
-            android:textSize="14sp"
-            android:layout_marginTop="4dp"/>
+            android:layout_weight="1"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/btnJoinGroup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Join"
-            android:layout_gravity="end"
-            android:textColor="@android:color/white"
-            android:backgroundTint="@color/purple_200"
-            android:layout_marginTop="10dp" />
+            <TextView
+                android:id="@+id/tvGroupName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Group Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tvGroupCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textStyle="italic"
+                android:textColor="@color/white"
+                android:layout_marginTop="2dp" />
+
+            <TextView
+                android:id="@+id/tvGroupDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Group Description"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="6dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnJoinGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Join"
+                android:textColor="@color/purple_200"
+                android:textAllCaps="false"
+                app:cornerRadius="28dp"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/white"
+                style="@style/Widget.Material3.Button.TextButton" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.cardview.widget.CardView>
